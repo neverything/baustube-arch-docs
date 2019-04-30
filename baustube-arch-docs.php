@@ -7,7 +7,7 @@
  * Author URI:      https://silvanhagen.com/
  * Text Domain:     baustube-arch-docs
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.2.0
  * GitHub Plugin URI: neverything/baustube-arch-docs
  *
  * @package         Neverything\Baustube_Arch_Docs
@@ -31,3 +31,13 @@ function load_files() {
 }
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\load_files' );
+
+/**
+ * Add default taxonomies to page object.
+ */
+function add_taxonomies_to_page() {
+    register_taxonomy_for_object_type( 'category', 'page' );
+    register_taxonomy_for_object_type( 'post_tag', 'page' );
+}
+
+add_action( 'init', __NAMESPACE__ . '\add_taxonomies_to_page' ); 
