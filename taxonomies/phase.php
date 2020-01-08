@@ -7,7 +7,7 @@ namespace Neverything\Baustube_Arch_Docs;
  * for use with 'page'.
  */
 function phase_init() {
-	register_taxonomy( 'phase', array( 'page' ), array(
+	register_taxonomy( 'phase', array( 'page', 'post' ), array(
 		'hierarchical'      => true,
 		'public'            => true,
 		'show_in_nav_menus' => true,
