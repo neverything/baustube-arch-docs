@@ -7,7 +7,7 @@ namespace Neverything\Baustube_Arch_Docs;
  * for use with 'page'.
  */
 function building_costs_init() {
-	register_taxonomy( 'building-costs', array( 'page' ), array(
+	register_taxonomy( 'building-costs', array( 'page', 'post' ), array(
 		'hierarchical'      => false,
 		'public'            => true,
 		'show_in_nav_menus' => true,
